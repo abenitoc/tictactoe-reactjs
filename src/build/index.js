@@ -96,7 +96,7 @@ var Tablero = React.createClass({
 	displayName: "Tablero",
 
 	tableroClick: function tableroClick(numeroFila, numeroColumna) {
-		this.props.manejadorClick(numeroFila, numeroColumna);
+		this.props.manejadorTableroClick(numeroFila, numeroColumna);
 	},
 	render: function render() {
 		var casillas = this.props.valores.map((function (valoresFila, indiceFila) {
