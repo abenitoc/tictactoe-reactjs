@@ -74,7 +74,7 @@ var Casilla = React.createClass({
 		};
 	},
 	casillaClick: function casillaClick() {
-		this.props.manejadorClick(this.props.indiceFila, this.props.indiceColumna);
+		tableroClick(this.props.indiceFila, this.props.indiceColumna);
 	},
 	render: function render() {
 		return React.createElement(
@@ -96,7 +96,7 @@ var Tablero = React.createClass({
 	displayName: "Tablero",
 
 	tableroClick: function tableroClick(numeroFila, numeroColumna) {
-		this.props.manejadorTableroClick(numeroFila, numeroColumna);
+		this.props.manejadorClick(numeroFila, numeroColumna);
 	},
 	render: function render() {
 		var casillas = this.props.valores.map((function (valoresFila, indiceFila) {

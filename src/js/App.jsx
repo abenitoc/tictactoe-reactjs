@@ -30,7 +30,7 @@ var App = React.createClass({
 		return (
 			<div>
 				<Cabecera texto={texto}/>
-				<Tablero valores={this.state.valores}
+				<Tablero valores={ this.state.valores }
 				manejadorClick={ this.appClick }/>
 			</div>
 		)
