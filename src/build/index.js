@@ -7,6 +7,7 @@ var JUGADORX = "jugador 1 - las X";
 var JUGADOR0 = "jugador 2 - los 0";
 var counter = 0;
 var ganador = "-";
+
 var App = React.createClass({
 	displayName: 'App',
 
@@ -17,8 +18,8 @@ var App = React.createClass({
 		};
 	},
 	reset: function reset() {
-		this.state.turno = JUGADORX;
-		this.state.valores = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']];
+		var initial = this.getInitialState();
+		this.setState(initial);
 		counter = 0;
 		ganador = "-";
 	},
@@ -94,7 +95,7 @@ var App = React.createClass({
 			React.createElement(Cabecera, { texto: texto }),
 			React.createElement(Tablero, { valores: this.state.valores,
 				manejadorTableroClick: this.appClick }),
-			React.createElement('input', { type: 'button', value: 'Reiniciar', inputClick: this.reset })
+			React.createElement('input', { type: 'button', value: 'Reiniciar', onClick: this.reset })
 		);
 	}
 });
